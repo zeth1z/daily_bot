@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ИСПОтулз - Расписание</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <h1 class="app-title">ИСПОтулз</h1>
+                <div class="header-actions">
+                    <button class="icon-btn" id="settingsBtn">⚙️</button>
+                    <button class="icon-btn" id="closeBtn">✕</button>
+                </div>
+            </div>
+            
+            <h2 class="page-title">Расписание</h2>
+            
+            <!-- View Toggle -->
+            <div class="view-toggle">
+                <button class="toggle-btn active" data-view="day">День</button>
+                <button class="toggle-btn" data-view="week">Неделя</button>
+            </div>
+            
+            <!-- Date Selector -->
+            <div class="date-selector">
+                <div class="date-item" data-date="2026-06-17">
+                    <div class="date-day">СР</div>
+                    <div class="date-num">17</div>
+                </div>
+                <div class="date-item active" data-date="2026-06-18">
+                    <div class="date-day">СЕГ</div>
+                    <div class="date-num">18</div>
+                </div>
+                <div class="date-item" data-date="2026-06-19">
+                    <div class="date-day">ПТ</div>
+                    <div class="date-num">19</div>
+                </div>
+                <div class="date-item" data-date="2026-06-20">
+                    <div class="date-day">СБ</div>
+                    <div class="date-num">20</div>
+                </div>
+                <div class="date-item" data-date="2026-06-22">
+                    <div class="date-day">ПН</div>
+                    <div class="date-num">22</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="day-header">
+                <h3 class="day-name">Четверг</h3>
+                <span class="lessons-count">4 пары</span>
+            </div>
+
+            <div class="schedule-list" id="scheduleList">
+                <!-- Lesson 1 -->
+                <div class="lesson-card" data-lesson="1">
+                    <div class="lesson-time">
+                        <div class="time-start">09:00</div>
+                        <div class="time-line"></div>
+                        <div class="time-end">10:30</div>
+                    </div>
+                    <div class="lesson-content">
+                        <div class="lesson-number">1 ПАРА</div>
+                        <h4 class="lesson-title">МДК.04.02 Обесп. кач. функцион. комп. систем</h4>
+                        <div class="lesson-teacher">Ольнев А.А.</div>
+                        <div class="lesson-room">📍 404</div>
+                    </div>
+                </div>
+
+                <!-- Lesson 2 -->
+                <div class="lesson-card" data-lesson="2">
+                    <div class="lesson-time">
+                        <div class="time-start">10:45</div>
+                        <div class="time-line"></div>
+                        <div class="time-end">12:40</div>
+                    </div>
+                    <div class="lesson-content">
+                        <div class="lesson-number">2 ПАРА</div>
+                        <h4 class="lesson-title">МДК.04.02 Обесп. кач. функцион. комп. систем</h4>
+                        <div class="lesson-teacher">Ольнев А.А.</div>
+                        <div class="lesson-room">📍 404</div>
+                    </div>
+                </div>
+
+                <!-- Break -->
+                <div class="break-card">
+                    <div class="break-time">12:50</div>
+                    <div class="break-icon">🍽️</div>
+                </div>
+
+                <!-- Lesson 3 -->
+                <div class="lesson-card" data-lesson="3">
+                    <div class="lesson-time">
+                        <div class="time-start">14:20</div>
+                        <div class="time-line"></div>
+                        <div class="time-end">15:55</div>
+                    </div>
+                    <div class="lesson-content">
+                        <div class="lesson-number">3 ПАРА</div>
+                        <h4 class="lesson-title">Основы алгоритмизации и программирования</h4>
+                        <div class="lesson-teacher">Симоненко С.И.</div>
+                        <div class="lesson-room">📍 222</div>
+                    </div>
+                </div>
+
+                <!-- Lesson 4 -->
+                <div class="lesson-card" data-lesson="4">
+                    <div class="lesson-time">
+                        <div class="time-start">16:05</div>
+                        <div class="time-line"></div>
+                        <div class="time-end">17:40</div>
+                    </div>
+                    <div class="lesson-content">
+                        <div class="lesson-number">4 ПАРА</div>
+                        <h4 class="lesson-title">Базы данных и СУБД</h4>
+                        <div class="lesson-teacher">Петрова М.В.</div>
+                        <div class="lesson-room">📍 315</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn" data-page="schedule">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Профиль</span>
+            </button>
+            <button class="nav-btn active" data-page="schedule">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">Расписание</span>
+            </button>
+            <button class="nav-btn" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Настройки</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

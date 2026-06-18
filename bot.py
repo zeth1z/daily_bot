@@ -7,7 +7,7 @@ from aiohttp import web
 import aiohttp_cors
 
 # Configuration
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+BOT_TOKEN = "7666555722:AAGYA1wSUIbUgmNK5ZZBX2poF1U4LuQAOyU"
 WEBAPP_URL = "https://your-domain.com/web_app"  # HTTPS required!
 HOST = '0.0.0.0'
 PORT = 8080
